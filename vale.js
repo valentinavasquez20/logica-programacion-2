@@ -13,9 +13,5 @@ function kelvin() {
 
 console.log("Los grados celcius a fahrenheit es: ", fahrenheit())
 
-document.write("Los grados celcius a Fahrenheit es: ",fahrenheit());
+document.write("Los grados celcius a Fahrenheit es: ",fahrenheit(),"  ");
 document.write("Los grados celcius a Kelvin es: ",kelvin());
-result.innerHTML = `
-<p>Los grados celcius a fahrenheit es: ${fahrenheit()}</p>
-<p>Los grados celcius a kelvin es: ${kelvin}</p>
-`;
