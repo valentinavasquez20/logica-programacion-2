@@ -1,17 +1,27 @@
-const celcius = prompt("Ingrede los grados celcius: ")
-console.log(celcius)
 
-function fahrenheit() {
-  conv1 = (1.8 * celcius) + 32
-  return conv1
+const calcular = document.getElementById("calcular");
+const resultado = document.getElementById("resultado")
+
+let numeroIngresado = numero.value;
+
+
+if (calcular) {
+  calcular.addEventListener("click", () => {
+    let numeroIngresado = numero.value;
+
+    let numeroFloat = parseFloat(numeroIngresado);
+
+    if (isNaN(numeroFloat)) {
+      resultado.textContent = "El dato de entrada no es un número válido.";
+      return;
+    }
+
+    let resultadoFahrenheit = (numeroFloat * 1.8) + 32;
+    let resultadoKelvin = numeroFloat + 273.15;
+
+    resultado.textContent = `
+      Los grados ingresados en grados Fahrenheit son: ${resultadoFahrenheit}
+      Los grados ingresados en grados Kelvin son: ${resultadoKelvin}
+    `;
+  });
 }
-
-function kelvin() {
-  conv2 = celcius + 273.5
-  return conv2
-}
-
-console.log("Los grados celcius a fahrenheit es: ", fahrenheit())
-
-document.write("Los grados celcius a Fahrenheit es: ",fahrenheit(),"  ");
-document.write("Los grados celcius a Kelvin es: ",kelvin());
